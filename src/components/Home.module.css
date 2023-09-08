@@ -1,0 +1,29 @@
+.container {
+    padding: var(--dPadding);
+}
+
+.title {
+    margin-top: 5rem;
+}
+.title span{
+    color: var(--secondary_color);
+    margin-right: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: var(--mPadding);
+    }
+
+    .cardContainer {
+        justify-content: center;
+    }
+
+    .title {
+        margin-top: 2rem;
+        font-size: 0.7rem;
+    }
+
+
+}
