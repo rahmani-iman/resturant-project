@@ -14,8 +14,13 @@
     align-items: flex-start;
     position: relative;
     margin-top: 2rem;
-    box-shadow: 0 0 1.5px 0.5px var(--secondary_color);
+    border: var(--border);
     border-radius: var(--radius);
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: var(--shadow);
+    transform: scale(1.04);
 }
 
 .card img {
@@ -42,7 +47,6 @@
 }
 
 /* Responsive */
-
 @media screen and (max-width: 1080px) {
     .cardContainer {
         grid-template-columns: repeat(3, 1fr);
@@ -51,7 +55,7 @@
 
 @media screen and (max-width: 600px) {
     .container h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-top: 3rem;
     }
 

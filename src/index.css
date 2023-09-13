@@ -7,7 +7,7 @@
 	--black_color: #353935;
 	--border: 1px solid gray;
 	--radius: 8px;
-	--shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+	--shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 	--dPadding: 0.5rem 3rem;
 	--mPadding: 0.5rem 1.5rem;
 	--transition: all .4s ease;

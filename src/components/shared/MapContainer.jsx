@@ -35,7 +35,7 @@ const MapContainer = () => {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBXXVoMStmKZYSB3iHC56KcTF0hI_V7kLs&libraries=places`;
     script.async = true;
     script.defer = true;
     script.onload = () => setMapLoaded(true);
@@ -49,7 +49,7 @@ const MapContainer = () => {
   return (
     <div style={{ width: "100%", height: "400px" }}>
       {mapLoaded && (
-        <LoadScript googleMapsApiKey="YOUR_API_KEY">
+        <LoadScript googleMapsApiKey="AIzaSyBXXVoMStmKZYSB3iHC56KcTF0hI_V7kLs">
           <GoogleMap
             mapContainerStyle={{ width: "100%", height: "100%" }}
             center={{ lat: 53.23, lng: 35.34 }}
