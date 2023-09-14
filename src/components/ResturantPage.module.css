@@ -1,0 +1,270 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--dPadding);
+    margin-top: 3rem;
+}
+
+/* Detailes of resturant */
+.desR {
+    border: 0.5px solid #303030;
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-left: 3rem;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headResturant {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.titleResturant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headResturant img {
+    width: 250px;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+}
+
+.titleResturant h2 {
+    font-size: 1.2rem
+}
+
+.rateResturant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rateResturant img{
+    width: 18px;
+    margin-bottom: 0.25rem;
+}
+.rateResturant span {
+    margin-left: 0.3rem;
+    opacity: 0.7;
+}
+
+.informationResturant {
+    width: 100%;
+}
+.informationResturant button {
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--secondary_color);
+}
+.informationResturant button:hover {
+    box-shadow: var(--shadow);
+}
+
+/* Categories of resturant */
+.category {
+    margin-top: 1rem;
+    height: 300px;
+    overflow-y: auto;
+}
+.category p {
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #303030;
+}
+
+/* Foods */
+.foodsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border: 0.5px solid #303030;
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.foods {
+    border: 0.5px solid #303030;
+    border-radius: var(--radius);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.titleFoods {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.titleFoods img {
+    width: 100px;
+    border-radius: var(--radius);
+}
+
+.desFoods h2{
+    font-size: 1.1rem;
+}
+.desFoods p {
+    width: 300px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+.cartFoods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartFoods button {
+    border: var(--border);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.2rem 1.7rem;
+    border-radius: 15px;
+    color: var(--secondary_color);
+    cursor: pointer;
+}
+.cartFoods button:hover {
+    box-shadow: var(--shadow);
+}
+
+/* Responsive */
+@media screen and (max-width: 1305px) {
+    .desFoods p {
+        width: 200px;
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .desFoods p {
+        width: 130px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .desR {
+        margin-left: 1rem;
+    }
+
+    .headResturant img {
+        width: 200px;
+    }
+
+    .titleResturant h2 {
+        font-size: 1rem;
+    }
+
+    .rateResturant {
+        font-size: 0.7rem;
+    }
+    .rateResturant img {
+        width: 18px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .foodsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .desFoods h2 {
+        font-size: 1rem;
+    }
+    .desFoods p {
+        font-size: 0.8rem;
+    }
+
+    .cartFoods p {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 720px) {
+
+    .titleResturant h2 {
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+
+    .headResturant img {
+        width: 140px;
+    }
+
+    .rateResturant img {
+        width: 18px;
+    }
+
+    .informationResturant button {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desR {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin-left: 0;
+    }
+
+    .headResturant img {
+        width: 100%;
+    }
+    
+    .headResturant h2 {
+        font-size: 1rem;
+    }
+
+    .rateResturant {
+        font-size: 0.8rem;
+    }
+    .rateResturant img {
+        width: 18px;
+    }
+
+    .informationResturant button {
+        font-size: 0.8rem;
+    }
+
+    .category {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        overflow-y: none;
+        overflow-x: auto;
+        height: auto;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+    .category p {
+        margin-left: 1rem;
+        border: none;
+    }
+
+    .foodsContainer {
+        grid-template-columns: repeat(1, 100vw);
+    }
+
+    .desFoods p {
+        width: 200px;
+    }
+
+}

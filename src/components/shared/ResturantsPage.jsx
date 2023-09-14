@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //Style
 import style from './ResturantsPage.module.css';
@@ -13,14 +14,14 @@ import delivery from '../../assets/images/delivery.png';
 const ResturantsPage = (props) => {
   const {loading, data, error} = props;
   if (loading) return <Loader />;
-  if (error) return <h2>Something went wrong ...</h2>;
+  if (error) return <h2>Something went wrong</h2>;
 
   return (
     <div className={style.container}>
       <h2>رستوران ها</h2>
       <div className={style.resturantContainer}>
         {data.resturants.map((resturant) => {
-          return <div className={style.cardContainer} key={resturant.slug}>
+          return <Link to={`/resturant/${resturant.slug}`} className={style.cardContainer} key={resturant.slug}>
             <img src={resturant.cover.url} alt='cover' className={style.image}/>
             <h3 className={style.name}>{resturant.name}</h3>
             <div className={style.rate}>
@@ -32,7 +33,7 @@ const ResturantsPage = (props) => {
               <img src={delivery} />
               <p>پیک فروشنده {resturant.deliveryfee} تومان</p>
             </div>
-          </div>
+          </Link>
         })}
       </div>
     </div>

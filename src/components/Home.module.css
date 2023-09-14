@@ -10,7 +10,7 @@
 }
 .title span{
     color: var(--secondary_color);
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     text-shadow: 5px 5px rgba(211, 177, 194, 0.05);
 }
 .title img {

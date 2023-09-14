@@ -39,6 +39,9 @@
     align-items: center;
     font-size: 0.8rem;
 }
+.rate span {
+    height: 28px;
+}
 .rate img {
     width: 15px;
     margin-right: 0.3rem;
@@ -88,6 +91,10 @@
         font-size: 0.7rem;
     }
 
+    .rate span {
+        height: 23px;
+    }
+
     .image {
         height: 100px;
     }
@@ -95,5 +102,17 @@
     .deliveryfee {
         font-size: 0.8rem;
     }
+}
 
+@media screen and (max-width: 400px) {
+    .name {
+        font-size: 0.9rem;
+    }
+
+    .deliveryfee {
+        font-size: 0.7rem;
+    }
+    .deliveryfee img {
+        width: 14px;
+    }
 }
