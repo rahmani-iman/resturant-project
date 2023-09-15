@@ -51,6 +51,10 @@
     .cardContainer {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .card button {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -63,4 +67,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .card button {
+        font-size: 0.75rem;
+    }
 }

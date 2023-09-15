@@ -49,6 +49,7 @@ const GET_RESTURANT = gql `
                 }
                 name
                 price
+                category
             }
         }
     }`

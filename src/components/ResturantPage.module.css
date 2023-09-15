@@ -82,6 +82,10 @@
     margin-top: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 0.5px solid #303030;
+    cursor: pointer;
+}
+.category p:hover {
+    color: var(--secondary_color);
 }
 
 /* Foods */
@@ -127,11 +131,14 @@
     justify-content: space-between;
     align-items: center;
 }
+.cartFoods p {
+    font-weight: 700;
+}
 .cartFoods button {
     border: var(--border);
     font-size: 0.9rem;
     font-weight: 700;
-    padding: 0.2rem 1.7rem;
+    padding: 0.2rem 1.8rem;
     border-radius: 15px;
     color: var(--secondary_color);
     cursor: pointer;
@@ -173,6 +180,10 @@
     }
 }
 @media screen and (max-width: 900px) {
+    .container {
+        padding: var(--mPadding);
+    }
+
     .foodsContainer {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -189,7 +200,6 @@
     }
 }
 @media screen and (max-width: 720px) {
-
     .titleResturant h2 {
         font-size: 0.8rem;
         margin-left: 0.5rem;
@@ -216,7 +226,7 @@
     }
 
     .desR {
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -245,7 +255,7 @@
     }
 
     .category {
-        width: 300px;
+        width: 280px;
         display: flex;
         align-items: center;
         overflow-y: none;
@@ -260,11 +270,17 @@
     }
 
     .foodsContainer {
-        grid-template-columns: repeat(1, 100vw);
+        grid-template-columns: repeat(1, 99vw);
+        padding: 1rem 0;
+        place-items: center;
+    }
+
+    .foods {
+        padding: 1.5rem;
     }
 
     .desFoods p {
-        width: 200px;
+        width: 190px;
     }
 
 }

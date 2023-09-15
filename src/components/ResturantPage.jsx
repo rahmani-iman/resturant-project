@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 //Component
 import Loader from './shared/Loader';
@@ -18,14 +18,16 @@ const ResturantPage = () => {
 
   const params = useParams();
   const slug = params.id
-  const navigate = useNavigate();
   
   const { loading, data, error } = useQuery(GET_RESTURANT, {variables: {slug}});
   if (loading) return <Loader />;
   if (error) return <h2>Something went wrong</h2>;
 
   const {name, rate, deliveryfee, startTime, endTime, category, foods, drinks, cover, location} = data.resturant;
-  console.log(data)
+
+  const foodsCategories = Array.from(new Set(foods.map(food => food.category)));
+  const drinksCategories = Array.from(new Set(drinks.map(drink => drink.category)));
+
   return (
     <div className={style.container}>
       <div className={style.desR}>
@@ -45,8 +47,11 @@ const ResturantPage = () => {
           </div>
         </div>
         <div className={style.category}>
-          {foods.map(food => {
-            return <p key={food.name}>{food.category}</p>
+          {foodsCategories.map(category => {
+            return <p key={category}>{category}</p>
+          })}
+          {drinksCategories.map(category => {
+            return <p key={category}>{category}</p>
           })}
         </div>
       </div>
