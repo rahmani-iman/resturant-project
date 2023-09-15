@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 //Component
 import Loader from './shared/Loader';
@@ -42,9 +42,9 @@ const ResturantPage = () => {
               </div>
             </div>
           </div>
-          <div className={style.informationResturant}>
+          <Link to={`/resturantinfo/${slug}`} className={style.informationResturant}>
             <button type='text'>اطلاعات و نظرات</button>
-          </div>
+          </Link>
         </div>
         <div className={style.category}>
           {foodsCategories.map(category => {

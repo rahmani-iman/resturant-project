@@ -9,6 +9,7 @@ import store from './redux/store';
 import Navbar from './components/shared/Navbar';
 import Home from './components/Home';
 import ResturantPage from './components/ResturantPage';
+import ResturantInformation from './components/ResturantInformation';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Home />} />
         <Route path='/resturant/:id' element={<ResturantPage />} />
+        <Route path='/resturantinfo/:id' element={<ResturantInformation />} />
         <Route path="/" element={<Navigate to="/home"/>} />
       </Routes>
     </Provider>
