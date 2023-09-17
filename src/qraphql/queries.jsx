@@ -42,6 +42,7 @@ const GET_RESTURANT = gql `
                 rate
                 details
                 category
+                id
             }
             drinks {
                 cover {
@@ -50,6 +51,7 @@ const GET_RESTURANT = gql `
                 name
                 price
                 category
+                id
             }
         }
     }`

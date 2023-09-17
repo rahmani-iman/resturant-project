@@ -74,7 +74,7 @@
 }
 
 .commentsContainer, .commentContainer {
-    border: 0.5px solid #303030;
+    border: var(--border);
     border-radius: var(--radius);
     margin-top: 3rem;
     padding: 2rem;
@@ -82,6 +82,7 @@
 
 .commentContainer {
     margin-top: 1.5rem;
+    padding: 1rem;
 }
 
 .commentTitle {
@@ -91,7 +92,7 @@
     margin-bottom: 1.5rem;
 }
 .commentTitle p {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* Responsive */
@@ -108,15 +109,15 @@
 
     .rt {
         width: 100%;
-        border-bottom: 0.5px solid #303030;
+        border-bottom: 1px solid #303030;
         margin-bottom: 2rem;
         padding-bottom: 2rem;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .title {
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .map {
@@ -130,6 +131,14 @@
     }
 }
 @media screen and (max-width: 550px) {
+    .logo img {
+        width: 150px;
+    }
+
+    .title {
+        line-height: 2rem;
+    }
+
     .det {
         flex-direction: column;
         align-items: center;
@@ -159,5 +168,27 @@
     }
     .commentTitle p, .comment p {
         font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .title h2 {
+        font-size: 1rem;
+    }
+
+    .category {
+        width: 85px;
+        overflow: scroll;
+        white-space: nowrap;
+    }
+
+    .commentsContainer h2 {
+        font-size: 1rem;
+    }
+    .commentTitle h3 {
+        font-size: 0.9rem;
+    }
+    .commentTitle p, .comment p {
+        font-size: 0.8rem;
     }
 }

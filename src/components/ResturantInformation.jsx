@@ -54,7 +54,9 @@ const ResturantInformation = () => {
               <span>{rate}</span>
               <img src={star} alt="rate" />
             </div>
-            <p>{category}</p>
+            <div className={style.category}>
+              <p>{category}</p>
+            </div>
           </div>
         </div>
         <div className={style.map}>

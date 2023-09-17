@@ -1,0 +1,123 @@
+/* Foods */
+.container {
+    padding: 1rem;
+}
+
+.foods {
+    border: 0.5px solid #303030;
+    border-radius: var(--radius);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.titleFoods {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.titleFoods img {
+    width: 100px;
+    border-radius: var(--radius);
+}
+
+.desFoods h2{
+    font-size: 1.1rem;
+}
+.desFoods p {
+    width: 300px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+.cartFoods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartFoods p {
+    font-weight: 700;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttonContainer button {
+    border: var(--border);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.2rem 1.8rem;
+    border-radius: 15px;
+    color: var(--secondary_color);
+    cursor: pointer;
+}
+.buttonContainer button:hover {
+    box-shadow: var(--shadow);
+}
+
+.buttonContainer .smallButton {
+    padding: 0;
+    border: none;
+}
+.smallButton {
+    width: 24px;
+    height: 24px;
+}
+.smallButton img {
+    width: 100%;
+    border-radius: 100%;
+}
+.counter {
+    margin: 0 1.4rem;
+    margin-top: 0.2rem;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media screen and (max-width: 1305px) {
+    .desFoods p {
+        width: 200px;
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .desFoods p {
+        width: 130px;
+    }
+}
+    
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .desFoods h2 {
+        font-size: 1rem;
+    }
+    .desFoods p {
+        font-size: 0.8rem;
+    }
+
+    .cartFoods p {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(1, 99vw);
+        padding: 1rem 0;
+        place-items: center;
+    }
+
+    .foods {
+        padding: 1.5rem;
+    }
+
+    .desFoods p {
+        width: 190px;
+    }
+}

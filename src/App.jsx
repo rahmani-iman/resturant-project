@@ -10,6 +10,7 @@ import Navbar from './components/shared/Navbar';
 import Home from './components/Home';
 import ResturantPage from './components/ResturantPage';
 import ResturantInformation from './components/ResturantInformation';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/resturant/:id' element={<ResturantPage />} />
         <Route path='/resturantinfo/:id' element={<ResturantInformation />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<Navigate to="/home"/>} />
       </Routes>
     </Provider>

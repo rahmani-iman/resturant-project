@@ -2,8 +2,9 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Link, useParams } from 'react-router-dom';
 
-//Component
+//Components
 import Loader from './shared/Loader';
+import Foods from './shared/Foods';
 
 //Style
 import style from './ResturantPage.module.css';
@@ -23,10 +24,12 @@ const ResturantPage = () => {
   if (loading) return <Loader />;
   if (error) return <h2>Something went wrong</h2>;
 
-  const {name, rate, deliveryfee, startTime, endTime, category, foods, drinks, cover, location} = data.resturant;
+  const {name, rate, foods, drinks, cover} = data.resturant;
 
   const foodsCategories = Array.from(new Set(foods.map(food => food.category)));
   const drinksCategories = Array.from(new Set(drinks.map(drink => drink.category)));
+
+  const foodsDrinks = foods.concat(drinks);
 
   return (
     <div className={style.container}>
@@ -56,42 +59,7 @@ const ResturantPage = () => {
         </div>
       </div>
       <div className={style.foodsContainer}>
-        {foods.map(food => {
-          return(
-          <div className={style.foods} key={food.name}>
-            <div className={style.titleFoods}>
-              <div className={style.desFoods}>
-                <h2>{food.name}</h2>
-                <p>{food.details}</p>
-              </div>
-              <div>
-                <img src={food.cover.url} alt='cover' />
-              </div>
-            </div>
-            <div className={style.cartFoods}>
-              <p>{food.price} تومان</p>
-              <button type='text'>افزودن</button>
-            </div>
-          </div>
-        )})}
-        {drinks.map(drink => {
-          return(
-            <div className={style.foods} key={drink.name}>
-              <div className={style.titleFoods}>
-                <div className={style.desFoods}>
-                  <h2>{drink.name}</h2>
-                  <p>{drink.details}</p>
-                </div>
-                <div>
-                  <img src={drink.cover.url} alt='cover' />
-                </div>
-              </div>
-              <div className={style.cartFoods}>
-                <div>{drink.price} تومان</div>
-                <button type='text'>افزودن</button>
-              </div>
-            </div>
-          )})}
+        {foodsDrinks.map(item => <Foods key={item.id} foods={item}/>)}
       </div>
     </div>
   );

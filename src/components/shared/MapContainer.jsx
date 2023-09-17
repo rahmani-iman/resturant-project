@@ -66,9 +66,5 @@ const MapContainer = () => {
 
 export default MapContainer;
 
-
-
-
-
 //api  AIzaSyBXXVoMStmKZYSB3iHC56KcTF0hI_V7kLs
 //api AIzaSyCW3NFRIDAQrmOEOr47bv0i1NIM74K04vQ
