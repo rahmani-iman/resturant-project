@@ -118,6 +118,11 @@
     }
 
     .desFoods p {
-        width: 190px;
+        width: 180px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .desFoods p {
+        width: 140px;
     }
 }

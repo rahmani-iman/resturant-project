@@ -8,7 +8,7 @@ import style from './Foods.module.css';
 import { addItem, removeItem, increase, decrease } from '../../redux/cart/cartAction';
 
 // Functions
-import { isInCart, quantityCount } from '../../helper/functions';
+import { isInCart, quantityCount, separateDigitsWithComma } from '../../helper/functions';
 
 // Icons
 import trashIcon from "../../assets/images/trash.png";
@@ -33,7 +33,7 @@ const Foods = ({foods}) => {
                 </div>
                 </div>
                 <div className={style.cartFoods}>
-                    <p>{foods.price} تومان</p>
+                    <p>{separateDigitsWithComma(foods.price)} تومان</p>
                     <div className={style.buttonContainer}>
                         {quantityCount(state, foods.id) === 1 && <button className={style.smallButton} onClick={() => dispatch(removeItem(foods))}><img src={trashIcon} alt="trash_icon" /></button>}
                         {quantityCount(state, foods.id) > 1 && <button className={style.smallButton} onClick={() => dispatch(decrease(foods))}><img src={minus} alt='minus_icon' /></button>}

@@ -20,9 +20,9 @@ const Navbar = () => {
 
   return (
     <div className={style.container}>
-      <div className={style.logo}>
+      <Link to="/home" className={style.logo}>
         <img src={logo} alt="logo" />
-      </div>
+      </Link>
       <div className={style.hamburger_menu} onClick={clickHandler}>
         <span
           className={`${style.bar} ${style.bar_one} ${
@@ -44,18 +44,18 @@ const Navbar = () => {
         <div className={style.search}>
           <input type="text" placeholder="در دِلیشِز جست‌وجو کنید ..." />
         </div>
-        <div className={style.location}>
+        <div className={style.location} onClick={() => setIsExpanded(false)}>
           <p>آدرس خود را انتخاب کنید</p>
           <img src={location} alt="location" />
         </div>
-        <Link to="/cart" className={style.cart}>
+        <Link to="/cart" className={style.cart} onClick={() => setIsExpanded(false)}>
           <p>غذاهای انتخابی شما</p>
           <div className={style.cartIcon}>
             <img src={cart} alt="cart" />
             <div className={style.counter}><span>{state.itemsCounter}</span></div>
           </div>
         </Link>
-        <div className={style.login}>
+        <div className={style.login} onClick={() => setIsExpanded(false)}>
           <button>عضویت / ورود</button>
         </div>
       </div>

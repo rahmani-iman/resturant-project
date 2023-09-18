@@ -11,6 +11,9 @@ import style from './Cart.module.css';
 // Actions
 import { clear, checkout } from '../redux/cart/cartAction';
 
+//Function
+import { separateNumbers } from '../helper/functions';
+
 //Icons
 import food from '../assets/images/pizza.png';
 import location from '../assets/images/locationIcon.png';
@@ -63,8 +66,9 @@ const Cart = () => {
                             <h4>سبد خرید</h4>
                         </div>
                         <div className={style.orderContainer}>
+                            {console.log(state.total)}
                             <p className={style.items}>مجموع تعداد انتخاب‌های شما : {state.itemsCounter}</p>
-                            <p className={style.payments}>مجموع سبد خرید شما : {state.total}</p>
+                            <p className={style.payments}>مجموع سبد خرید شما : {separateNumbers(state.total)} تومان</p>
                             <div className={style.register}>
                                 <button className={style.checkout} onClick={() => dispatch(checkout())}>پرداخت</button>
                                 <button className={style.clear} onClick={() => dispatch(clear())}>حذف سبد خرید</button>
