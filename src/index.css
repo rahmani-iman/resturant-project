@@ -39,6 +39,4 @@
   color: var(--white_color);
   transition: var(--transition);
 }
-body {
-	max-width: 1350px;
-}
+

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 /* Style */
 import style from "./Navbar.module.css";
+
+//Action
+import { setInputValue } from "../../redux/searchValues/searchValuesAction";
 
 //Images
 import logo from "../../assets/images/logo.png";
@@ -16,6 +19,7 @@ const Navbar = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const dispatch = useDispatch();
   const state = useSelector(state => state.cartState);
 
   return (
@@ -42,7 +46,9 @@ const Navbar = () => {
       </div>
       <div className={`${style.leftContainer} ${isExpanded && style.expanded}`}>
         <div className={style.search}>
-          <input type="text" placeholder="در دِلیشِز جست‌وجو کنید ..." />
+          <Link to="/selectedResturants">
+            <input type="text" placeholder="در دِلیشِز جست‌وجو کنید ..." onChange={(e) => dispatch(setInputValue(e.target.value))}/>
+          </Link>
         </div>
         <div className={style.location} onClick={() => setIsExpanded(false)}>
           <p>آدرس خود را انتخاب کنید</p>

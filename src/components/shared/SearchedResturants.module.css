@@ -1,0 +1,10 @@
+.container {
+    padding: var(--dPadding);
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .container {
+        padding: var(--mPadding);
+    }
+}

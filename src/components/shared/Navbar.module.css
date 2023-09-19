@@ -34,7 +34,7 @@
 .location {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 30px;
     cursor: pointer;
     font-size: 0.9rem;
@@ -203,6 +203,7 @@
 
     .location {
         margin-right: 0;
+        align-items: center;
     }
     .location p {
         display: block;

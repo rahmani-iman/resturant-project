@@ -12,13 +12,16 @@ import star from '../../assets/images/star.png';
 import delivery from '../../assets/images/delivery.png';
 
 const ResturantsPage = (props) => {
-  const {loading, data, error} = props;
+  const {loading, data, error, isSearched} = props;
   if (loading) return <Loader />;
   if (error) return <h2>Something went wrong</h2>;
 
   return (
     <div className={style.container}>
-      <h2>رستوران ها</h2>
+      <div className={style.header}>
+        <h2>رستوران ها</h2>
+        {isSearched && <Link to="/home">&larr;</Link>}
+      </div>
       <div className={style.resturantContainer}>
         {data.resturants.map((resturant) => {
           return <Link to={`/resturant/${resturant.slug}`} className={style.cardContainer} key={resturant.slug}>
@@ -36,6 +39,11 @@ const ResturantsPage = (props) => {
           </Link>
         })}
       </div>
+        {!data.resturants.length &&
+          <div className={style.noExist}>
+            <p>متاسفانه رستورانی وجود ندارد !</p>
+          </div>
+        }
     </div>
   );
 };
