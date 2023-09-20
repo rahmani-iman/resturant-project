@@ -33,7 +33,7 @@ const GET_RESTURANT = gql `
                 latitude
                 longitude
             }
-            foods {
+            foods(first: 30) {
                 cover {
                     url
                 }
