@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 .card button span {
-    color: var(--secondary_color);
+    color: var(--primary_color);
 }
 .card button:hover {
     transform: scale(1.05);

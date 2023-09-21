@@ -10,7 +10,6 @@ import { setInputValue } from "../../redux/searchValues/searchValuesAction";
 
 //Images
 import logo from "../../assets/images/logo.png";
-import location from "../../assets/images/location.png";
 import cart from "../../assets/images/fastcart.png";
 
 const Navbar = () => {
@@ -49,10 +48,6 @@ const Navbar = () => {
           <Link to="/selectedResturants">
             <input type="text" placeholder="در دِلیشِز جست‌وجو کنید ..." onChange={(e) => dispatch(setInputValue(e.target.value))}/>
           </Link>
-        </div>
-        <div className={style.location} onClick={() => setIsExpanded(false)}>
-          <p>آدرس خود را انتخاب کنید</p>
-          <img src={location} alt="location" />
         </div>
         <Link to="/cart" className={style.cart} onClick={() => setIsExpanded(false)}>
           <p>غذاهای انتخابی شما</p>

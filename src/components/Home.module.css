@@ -9,7 +9,7 @@
     margin-top: 5rem;
 }
 .title span{
-    color: var(--secondary_color);
+    color: var(--primary_color);
     margin-right: 0.5rem;
     text-shadow: 5px 5px rgba(211, 177, 194, 0.05);
 }
