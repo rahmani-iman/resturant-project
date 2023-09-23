@@ -2,7 +2,7 @@ const initialState = {
   inputValue: "",
 };
 
-const searchValuesReducer = (state=initialState, action) => {
+const searchValuesReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SET_INPUT_VALUE":
       return {

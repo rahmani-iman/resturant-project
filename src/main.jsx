@@ -1,21 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.jsx';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
 
 //Apollo client
 const client = new ApolloClient({
   uri: "https://api-ca-central-1.hygraph.com/v2/clm6onuju41u601uk2kcm68uf/master",
-  cache : new InMemoryCache()
-})
+  cache: new InMemoryCache(),
+});
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </ApolloProvider>
-  
-)
+);

@@ -29,7 +29,7 @@
     align-items: center;
 }
 .location div p {
-    color: var(--secondary_color);
+    color: var(--primary_color);
     cursor: pointer;
     margin-bottom: 1.5rem;
 }
@@ -39,6 +39,30 @@
     margin-bottom: 2rem;
     border: none;
     outline: none;
+    pointer-events: none;
+}
+.location .addressInput {
+    box-shadow: 0 0 3px var(--primary_color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    pointer-events: all;
+}
+.addressInputContainer {
+    position: relative;
+}
+.addressInputContainer img {
+    position: absolute;
+    top: 2.1rem;
+    left: 1rem;
+    display: none;
+}
+.addressInputContainer .tickInput {
+    display: inline-block;
+    cursor: pointer;
+}
+.addressInputContainer .tickInput:hover {
+    box-shadow: 0 0 5px #047C55;
+    border-radius: 100%;
 }
 
 .selectedLocations {
@@ -76,6 +100,17 @@
 }
 .checkBox input:checked ~ span {
     background-color: var(--primary_color);
+}
+.checkBox img {
+    display: none;
+}
+.checkBox .deleteInput {
+    display: inline-block;
+    cursor: pointer;
+}
+.checkBox .deleteInput:hover {
+    box-shadow: 0 0 5px #A10808;
+    border-radius: 100%;
 }
 
 .cart p {
@@ -117,6 +152,11 @@
         padding: 1rem;
         margin: 4rem 1rem;
     }
+
+    .addressInputContainer img {
+        left: 0.5rem;
+    }
+
 }
 @media screen and (max-width: 500px) {
 

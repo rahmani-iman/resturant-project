@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   const dispatch = useDispatch();
-  const state = useSelector(state => state.cartState);
+  const state = useSelector((state) => state.cartState);
 
   return (
     <div className={style.container}>
@@ -46,14 +46,24 @@ const Navbar = () => {
       <div className={`${style.leftContainer} ${isExpanded && style.expanded}`}>
         <div className={style.search}>
           <Link to="/selectedResturants">
-            <input type="text" placeholder="در دِلیشِز جست‌وجو کنید ..." onChange={(e) => dispatch(setInputValue(e.target.value))}/>
+            <input
+              type="text"
+              placeholder="در دِلیشِز جست‌وجو کنید ..."
+              onChange={(e) => dispatch(setInputValue(e.target.value))}
+            />
           </Link>
         </div>
-        <Link to="/cart" className={style.cart} onClick={() => setIsExpanded(false)}>
+        <Link
+          to="/cart"
+          className={style.cart}
+          onClick={() => setIsExpanded(false)}
+        >
           <p>غذاهای انتخابی شما</p>
           <div className={style.cartIcon}>
             <img src={cart} alt="cart" />
-            <div className={style.counter}><span>{state.itemsCounter}</span></div>
+            <div className={style.counter}>
+              <span>{state.itemsCounter}</span>
+            </div>
           </div>
         </Link>
         <div className={style.login} onClick={() => setIsExpanded(false)}>

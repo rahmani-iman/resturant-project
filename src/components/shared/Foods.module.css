@@ -52,7 +52,7 @@
     font-weight: 700;
     padding: 0.2rem 1.8rem;
     border-radius: 15px;
-    color: var(--secondary_color);
+    color: var(--primary_color);
     cursor: pointer;
 }
 .buttonContainer button:hover {
